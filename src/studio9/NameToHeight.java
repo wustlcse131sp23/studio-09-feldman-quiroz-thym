@@ -1,12 +1,17 @@
 package studio9;
-
+import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 import support.cse131.NotYetImplementedException;
 
 public class NameToHeight {
+	private String FirstName;
+	private String LastName;
+	private int StudentIDNumber;
+	
+	
+	
 	/**
 	 * Construct and fill a map with your studio group members' names, each
 	 * associated with his or her height.
@@ -19,9 +24,19 @@ public class NameToHeight {
 	 */
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-
-		// FIXME
-		throw new NotYetImplementedException();
+		Map<String,Double> temp = new HashMap<>();
+		String name = "";
+		double height = 0;
+		for (int i = 0; i<3; i++) {
+			System.out.println("What is your name?");
+			name = in.next();
+			System.out.println("What is your height in inches?");
+			height = in.nextInt();
+			temp.put(name, height);
+		}
+		
+System.out.print(temp);
+		
 
 	}
 }
